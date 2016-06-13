@@ -1,1 +1,78 @@
+<!DOCTYPE html>
+<html>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body>
+
+	<div ng-app="myApp" ng-controller="myCtrl">
+		<select ng-options="x.id as x.subItem.name for x in items" ng-model="selected" ng-change="abc()"></select>
+		<select ng-options="y.id as y.label for y in sub" ng-model="selecteda"></select>
+	</div>
+
+
+<script>
+	var app = angular.module('myApp', []);
+
+	app.service('chutiapa',function(){
+		var subitems = [{
+		  id: 1,
+		  mid: 1,
+		  label: 'ailaLabel',
+		  subItem: { name: 'aSubItem' }
+		}, {
+		  id: 2,
+		   mid: 1,
+		  label: 'bailaLabel',
+		  subItem: { name: 'bSubItem' }
+		}, {
+		  id: 3,
+		   mid: 2,
+		  label: 'mailaLabel',
+		  subItem: { name: 'bSubItem' }
+		}, {
+		  id: 4,
+		   mid: 2,
+		  label: 'lailaLabel',
+		  subItem: { name: 'bSubItem' }
+		}];
+
+		this.getdata = function(x)
+		{
+			var c = [];
+			subitems.forEach(function(i) {
+				if(i.mid == x){
+					c.push(i);
+				}
+			});
+			return c;
+		};
+	});
+  
+	app.controller('myCtrl', function($scope, chutiapa) {
+		$scope.abc = function(){
+			$scope.sub = chutiapa.getdata($scope.selected);
+		};
+
+		$scope.items = [{
+		  id: 1,
+		  label: 'aLabel',
+		  subItem: { name: 'aSubItem' }
+			},{
+		  id: 2,
+		  label: 'bLabel',
+		  subItem: { name: 'bSubItem' }
+		}];
+	});
+
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
 
