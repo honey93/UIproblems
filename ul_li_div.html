@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+body
+{
+
+text-align:center;
+
+}
+*
+{
+padding:0;
+margin:0;
+}
+ul
+{
+overflow: hidden;
+
+list-style:none;
+
+display: block;
+}
+
+li
+
+{
+margin-bottom: 5px;
+position: relative;
+ overflow: hidden;
+margin-right: 1px;
+display: block;
+
+width: 100px;
+height: 100px;
+background-color: #C5CAE9;
+text-align: center;
+border: 2px solid grey;
+border-radius: 8px;
+}
+
+li:hover 
+{
+
+color: white;
+background-color: #3F51B5;
+}
+
+
+#lolo
+{
+margin-top: 25px;
+
+display: block;
+}
+
+
+#nano
+
+{
+
+
+
+}
+
+
+.aila
+{
+color:white;
+position: absolute;
+width: 100px;
+height: 10px;
+bottom: 0px;
+background-color:red;
+opacity: 0.5;
+
+
+font-size: 9px;
+
+}
+
+.laila
+{
+color:white;
+opacity:0.5;
+position: absolute;
+width: 100px;
+height: 10px;
+bottom: 0px;
+background-color:green;
+
+
+font-size: 9px;
+
+}
+
+
+
+
+
+</style>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+<body>
+
+
+<div id="nano">
+<ul>
+<li> <i id="lolo" class="fa fa-camera-retro fa-3x"></i> 
+Camera
+<div class="aila"> New Image  </div>
+</li> 
+
+<li> <i id="lolo" class="fa fa-desktop fa-3x"></i>
+PC
+<div class="laila"> New Image  </div>
+</li>
+
+<li>
+<i id="lolo" class="fa fa-cogs fa-3x"></i>
+Setting
+<div class="aila"> New Image  </div>
+</li>
+
+</ul>
+</div>
+
+
+
+
+<p id="qwqw"> 
+
+</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+
+    document.getElementById("demo").innerHTML = Boolean(10 > 9);
+
+document.getElementById("lolo").style.color = "orange";
+
+}
+</script>
+
+</body>
+</html>
