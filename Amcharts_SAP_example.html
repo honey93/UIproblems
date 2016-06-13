@@ -1,0 +1,148 @@
+<html>
+
+<head>
+
+
+
+<script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+<script src="https://www.amcharts.com/lib/3/serial.js"></script>
+<script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+
+
+<title>
+SAP
+</title>
+
+
+<style>
+
+#chartdiv {
+	width		: 100%;
+	height		: 500px;
+	font-size	: 11px;  
+}										
+
+.amcharts-export-menu-top-right {
+  top: 10px;
+  right: 0;
+}		
+
+h1
+{
+text-align: center;
+}
+
+h1
+
+{
+  border-bottom: 2px solid grey;
+  padding-bottom: 3px;
+}
+</style>
+
+
+<script>
+
+
+
+
+
+var chart = AmCharts.makeChart("chartdiv", {
+  "type": "serial",
+  "theme": "light",
+  "marginRight": 70,
+  "dataProvider": [{
+    "country": "Create Sales Order:",
+    "visits": 56,
+    "color": "#90CAF9"
+  }, {
+    "country": "Change Sales Order: ",
+    "visits": 73,
+    "color": "#64B5F6"
+  }, {
+    "country": "Display Sales Order: ",
+    "visits": 17,
+    "color": "#42A5F5"
+  }, {
+    "country": "General Table Display",
+    "visits": 79,
+    "color": "#2196F3"
+  }, {
+    "country": "Display of Entries Found",
+    "visits": 23,
+    "color": "#1E88E5"
+  }, {
+    "country": "Sales Orders,  Display",
+    "visits": 7,
+    "color": "#1976D2"
+  }, {
+    "country": " Shipping, Sales Orders,Display",
+    "visits": 26,
+    "color": "#1565C0"
+  }],
+  "valueAxes": [{
+    "axisAlpha": 0,
+    "position": "left",
+    "title": "Time in Seconds"
+  }],
+  "startDuration": 1,
+  "graphs": [{
+    "balloonText": "<b>[[category]]: [[value]] seconds </b>",
+    "fillColorsField": "color",
+    "fillAlphas": 0.9,
+    "lineAlpha": 0.2,
+    "type": "column",
+    "valueField": "visits"
+  }],
+  "chartCursor": {
+    "categoryBalloonEnabled": false,
+    "cursorAlpha": 0,
+    "zoomable": false
+  },
+  "categoryField": "country",
+  "categoryAxis": {
+    "gridPosition": "start",
+    "labelRotation": 45
+  },
+  "export": {
+    "enabled": true
+  }
+
+});
+
+
+
+
+</script>
+
+</head>
+
+<body>
+
+
+
+<div class="section">
+ <div class="container">
+      <div class="row">
+        <div class="col-md-12"> 
+		                 <h1>  SAP Scenario based on Activity           </h1>
+						 <h2> Insights: </h2>
+								<ul>
+									<li>
+											<p> General Table display is taking the highest time of <b> 79 seconds </b>.   </p> </li>
+								   <li>	 <p> Entire Process is getting completed in <b> 281 seconds. </b> </p> </li>
+							   </ul>
+							<div id="chartdiv"></div>
+					</div>
+		</div>
+</div>
+</div>
+</body>
+
+
+</html>
