@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sidebar Menu</title>
+	<link href="style.css" rel="stylesheet" type="text/css"> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>	
+
+	<script>
+	 var x = 0;
+	 $(document).ready(function(){
+	   
+	   
+	   $('#sidebar-btn').click(function(){
+	     
+		 if ( x == 0 )
+		 {
+		  $('#sidebar').animate({left:'0px'});
+		 x = 1;
+		 }
+		 else 
+		 {
+		 $('#sidebar').animate({left:'-200px'});
+	     x = 0;		 
+		 }
+	   
+	   
+	   });
+	   
+	   
+	   
+	   
+	  
+	     
+	 });
+	 
+	 </script>
+	
+	
+</head>
+
+
+
+
+
+<body>
+       
+		<div id="sidebar" > 
+			
+			<ul>
+				 <li> <a href="#"> Home </a> </li>
+				 <li> <a href="#"> About </a> </li>
+				 <li> <a href="#"> Contact </a> </li>
+				 <li> <a href="#"> ReachMe </a> </li>
+			</ul>	
+		
+		<div id="sidebar-btn">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+		
+		
+		
+		
+		
+		</div>
+		
+		
+			
+			
+			
+		
+
+</body>
+</html>
+		
+
+		
+		
+				 
+
+				 
+				
+			
+
+
