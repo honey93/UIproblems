@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+	.slidediv{
+	width: 700px;
+	height: 300px;
+	overflow: hidden;
+	border: 1px solid white;
+	position: relative;
+	
+	min-width:400px;
+	border: 1px solid black;
+	}
+	.imagein{
+	position: relative;
+	border: 1px solid blue;
+	width: 27%;
+	height: 100%;
+	margin: 0 10px;
+	<!-- position:absolute; -->
+	}
+	.leftarr{
+	position: absolute;
+	top:130px;
+	left:0px;
+	width: 50px;
+	height:50px;
+	}
+	.rightarr{
+	position: absolute;
+	top:130px;
+	right:0px;
+	width:50px;
+	height:50px;
+	}
+	.imageout{
+	border: 1px solid pink;
+	width: 27%;
+	height: 100%;
+	margin: 0 10px;
+	}
+	.imageout.ng-hide-add{
+	transition: all .2s linear;
+	left: 0px;
+	}
+	.imageout.ng-hide-add.ng-hide-add-active{
+	left: 700px;
+	}
+	.imageout.ng-hide-remove{
+	transition: all .2s linear;
+	left:-700px;
+	}
+	.imageout.ng-hide-remove.ng-hide-remove-active{
+	left: 0px;
+	}
+	
+	
+	.imagein.ng-hide-add{
+	 transition: all 1.11s linear;
+	 left:0px;
+	}
+	.imagein.ng-hide-remove{
+		transition: all 1.31s 1s linear;
+		left: 200px;
+	}
+	 
+	.imagein.ng-hide-add.ng-hide-add-active{
+		left: -200px;
+	}
+	.imagein.ng-hide-remove.ng-hide-remove-active{
+		left: 0px;
+	}
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.js"></script>
+</head>
+
+<body>
+
+<div ng-app="myapp" ng-controller="myc">
+ 
+	<p>Input something in the input box:</p>
+	<p>Name : <input type="text" ng-model="name" placeholder="Enter name here"></p>
+	<h1>Hello {{name}}</h1>
+
+	<div class="slidediv">
+		<img ng-src ="{{x.image}}" ng-class="classs" ng-hide="!isCurrentSlideIndex($index)" ng-repeat="x in slides">
+		<img ng-src="Circled Chevron Left-50.png" class="leftarr" ng-click="changeprev()">
+		<img ng-src="Circled Chevron Right-64.png" class="rightarr" ng-click="change()">
+	</div>
+
+	<li ng-repeat="y in slides">
+	 <a href="#" ng-click="setCurrentSlideIndex($index)">{{y.description}}  </a>
+	</li>
+	<button ng-click="changeprev()"> Previous Slide   </button>
+	<button ng-click="change()"> Next Slide   </button>
+</div>
+
+<script>
+	var x = angular.module("myapp",['ngAnimate']);
+	x.controller("myc",fun);
+	function fun($scope, $interval){
+		$scope.classs = "imagein";
+		$scope.slides = [{image:'Capture1.jpg',description:'Image 00'},
+						{image:'Capture2.jpg',description:'Image 01'},
+						{image:'Capture3.jpg',description:'Image 03'},
+						{image:'Capture4.jpg',description:'Image 04'},
+						{image:'Capture5.jpg',description:'Image 05'},
+						{image:'Capture6.jpg',description:'Image 06'}];
+							
+		$scope.name = $scope.slides[0].image;
+		$scope.currentIndex = 0;
+	   $scope.setCurrentSlideIndex = function(index){
+		$scope.currentIndex = index;
+	   }
+		
+		   
+		   
+	   $scope.isCurrentSlideIndex = function(index){
+		 if((index >= $scope.currentIndex) && (index < $scope.currentIndex + 3) )
+	      return 1
+		  
+	   }
+		 
+		 function change(){
+			 if($scope.currentIndex < 2 ){
+				$scope.currentIndex = $scope.currentIndex +1;
+			 }
+		 
+			  else{
+				$scope.currentIndex = 0;
+			  }
+		}
+		$scope.change = function(){
+			$scope.classs = "imagein";
+			if($scope.currentIndex <3){
+				$scope.currentIndex = $scope.currentIndex + 3;
+			 }
+			 else {
+				$scope.currentIndex = 0;
+			 }
+			 
+		}
+	 
+		$scope.changeprev = function(){
+			$scope.classs = "imageout";
+			
+			if($scope.currentIndex > 0 ){
+				$scope.currentIndex = $scope.currentIndex -3;
+			}
+			else {
+				$scope.currentIndex = 5;
+			 }
+		}
+	 
+	//$interval(change,5000);
+	}
+</script>
+</body>
+</html>
