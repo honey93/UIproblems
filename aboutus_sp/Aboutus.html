@@ -9,9 +9,25 @@
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <style>
   
+  *{
+  box-sizing: border-box;
+  }
+  
    h1,h2,h3,h4,h5,h6 {
    font-family: Montserrat;
-   }
+   font-weight: bold;
+    font-style: normal;
+    text-transform: uppercase;
+    text-decoration: none;
+  
+  padding-bottom: 10px !imprtant;
+  }
+  
+  body{
+  line-height: 1.5em;
+  font-weight: 500;
+  
+  }
    
    p,button{
    
@@ -60,13 +76,36 @@
 	background-color:#263238;
 	color:white;
 	padding: 40px 40px;
+	
+	
+	}
+	
+	.customize > div{
+	width: 80%;
+	margin: auto;
 	}
   
     .customize h1{
-	color: #64DD17;
-	font-size: 64px;
+	color: #65bc46;
+	font-size: 43px;
+	font-weight: bold;
+	padding-bottom: 10px;
 	}
 	
+	.customize img{
+	margin-bottom: 9.71%;
+	}
+	.customize h5{
+	font-weight: bold;
+	font-size: 22px;
+	font-style: normal;
+	color: #65bc46;
+	}
+	
+	
+	.padd-bottom{
+	margin-bottom: 5%;
+	}
 	.customize p {
 	font-size: 17px;
 	}
@@ -84,10 +123,9 @@
 	
 	.cusbutton{
 	
-	position: absolute;
+
+	margin-bottom: 20px;
 	padding: 5px 10px;
-	bottom: 35px;
-	left: 150px;
 	background:transparent;
 	border: 1px solid black;
 	color: black;
@@ -115,25 +153,48 @@
 	color: white;
 	text-align: center;
 	background-color: #263238;
-	padding: 50px 20px;
+	padding: 0px 20px;
+    background-image: url("images/person.jpg");
+    background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
 	
 	}
 	
 	.explore h1{
 	
-	color: #64DD17;
+	color: #65bc46;
+	font-weight:bold;
+	}
+	
+	.explore h4{
+	color: white;
 	}
 	
 	
 	
 	.listings{
 	
-	padding: 40px ;
+	background-image: url("images/stay_band.jpg");
+	background-position: center;
+	
+	padding: 80px ;
 	
 	text-align: center;
 	
 	background-color: #B2FF59;
 	
+	}
+	
+	.listings .per{
+	color: yellow;
+	font-weight: 500;
+	font-size: 64px;
+	margin-bottom: 40px;
+	}
+	
+	.listings h3{
+	color: white;
 	}
 	
 	
@@ -142,10 +203,18 @@
 	.discover{
 	padding: 50px 15px;
 	background-color: #263238;
+	
+	 background-image: url("images/person.jpg");
+    background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
 	}
 	
+	
+	
+	
 	.discover h1{
-	color: #64DD17;
+	color: #65bc46;
 	}
 	
 	.discover h4{
@@ -153,7 +222,7 @@
 	}
 	
 	.discover h3{
-	color: #64DD17;
+	color: #65bc46;
 	padding: 5px 20px;
 	}
 	
@@ -171,6 +240,65 @@
 	.discover .right{
 	text-align: left;
 	}
+	
+	.career{
+	background-color: #383d51;
+	padding: 50px;
+	
+	}
+	
+	.career p {
+	color: white;
+	}
+	
+	.career h1{
+	color: #65bc46;
+	font-size: 30px;
+	padding-bottom: 10px;
+	}
+	
+	.team{
+	text-align:center;
+	background-image: url("images/stay_band.jpg");
+	background-position: center;
+	
+	padding: 60px 40px;
+	
+	}
+	.team h1,h4{
+	color: #eeee22;
+	}
+	
+	.team h4{
+	font-size: 18px;
+	}
+	.team p{
+	
+	color: white;
+	margin-bottom: 50px;
+	}
+	.team .team_sub{
+	
+		width: 80%;
+	     margin: auto;
+	}
+	
+	.carbutton{
+		padding: 5px 40px;
+	background:transparent;
+	border: 3px solid white;
+	color: white;
+	border-radius: 22px;	
+	}
+
+    .carbutton:hover{
+	color: white;
+	}
+	
+	.carbutton:active{
+	color: white;
+	}
+	
   </style>
   
 </head>
@@ -202,62 +330,49 @@
 		  
 	  <section class="customize" >
 			  <div class="row">
-				<div class="col-md-12 text-center">
+				<div class="col-md-12 ">
+				<div class="text-center padd-bottom">
 					<h1> Customize Your Experience </h1>
 					<p>We genuinely believe we can curate the world’s local experiences, and make them more accessible to people in an honest manner. Our goal is to allow people to explore alternative places to stay, book instantly as per their budget and experience more by going truly local.
 					 
 					</p>
+				</div>	
 				</div>
 				
-				<div class="col-sm-4">
-					<div class="typescustom">
-						 <img src="images/smart.jpg" width="100%">
-					
+					<div class="col-sm-4 ">
+				  
+						 <img src="images/simple tech.png" width="65px" height="65px">
+						<h5> SIMPLE TECHNOLOGY </h5>					 
+						 <p> Verify each user or provider so that there is a honest ecosystem of trust and transparency. </p>
 						 
-						 <h3> Bring accommodations and services inventory onto one platform so that needs and wants of our community are met . </h3>
-						 <button class="cusbutton"> Explore Details </button>
-					 </div>
 				 
 				 
 				 
 				 
 				</div>
-				<div class="col-sm-4">
-				   <div class="typescustom">
-						 <img src="images/cool.jpg" width="100%">
-											 
-						 <h3> Verify each user or provider so that there is a honest ecosystem of trust and transparency. </h3>
-						 <button class="cusbutton"> Explore Details </button>
-					 </div>
+								<div class="col-sm-4 ">
+				 
+						 <img src="images/oneplatform.png" width="65px" height="65px">
+				 <h5>  ONE PLATFORM </h5>   							 
+						 <p> Verify each user or provider so that there is a honest ecosystem of trust and transparency. </p>
+						 
 				   
 				  
 				 
 				</div>
 				<div class="col-sm-4">
-				  <div class="typescustom">
-						 <img src="images/lux.jpg" width="100%">
+						 <img src="images/verifiedcustomers.png" width="65px" height="65px">
+				  <h5>  VERTIFIED USERS </h5> 
 											 
-						 <h3> Verify each user or provider so that there is a honest ecosystem of trust and transparency. </h3>
-						 <button class="cusbutton"> Explore Details </button>
-					 </div>
+						 <p> Verify each user or provider so that there is a honest ecosystem of trust and transparency. </p>
+						 
+					 
 				  
 				</div>
 			  </div>
 	  </section>
 	  
-	  <section class="let">
-		<div class="row">
-	    <div class="col-md-6">
-		<h1> Do you have an Apartment to Let ? </h1>
-		<button>  SIGNUP HERE </button>
-		</div>
-		
-		<div class="col-md-6">
-		<h1> Own a Service? Partner with Us ? </h1>
-		<button> SIGNUP HERE  </button>
-		</div>
-	    </div>
-	  </section>
+	 
 	  
 	<section class="explore">
 	  <div class="row">
@@ -327,24 +442,32 @@
 	  
 		<div class="row">
 		
-				<div class="col-md-4">
-				  <h3>Inspiring Properties Listed</h3>
-				  <h3> 40 </h3>
+				<div class="col-md-3">
+                  <p class="per"> 16000+ </p>				 
+				 <h3>CITIES TO CHOOSE FROM</h3>
+				 
 				</div>
 				  
 				 
-				<div class="col-md-4">
-				    <h3>Wonderful Parties Joined</h3>
-					<h3> 12 </h3>
+				<div class="col-md-3">
+						<p class="per"> 20+ </p>
+					<h3>STAY OPTIONS</h3>
+
 				</div>
-				<div class="col-md-4">
-				  <h3>Incredible Experience Served</h3>
-				  <h3> 8 </h3>
+				<div class="col-md-3">
+				  <p class="per"> 100000 </p>
+				  <h3>EXPERIENCE TO BE SERVED</h3>
+				  
+				</div>
+				<div class="col-md-3">
+				  <p class="per"> 1000+ </p>
+				  <h3>SERVICES AVAILABLE</h3>
+				  
 				</div>
 				 
 				
-		
 		</div>
+		
 	  
 	  </section>		  
 	  
@@ -357,13 +480,14 @@
 	  
 	 
 	  
-	  <section class="discover">
-	  <h1 class="text-center">Our Features:</h1>
 	 
+	 
+	  <section class="discover">
 			<div class="row">
 				<div class="col-sm-4 left">
-				  <h3>Seek</h3>
-				  <p>Map search yourself to find a place that is most relevant to you – near a museum, near an event, near work, on the river, or just wherever you want. Then search your local bar, restaurant, theater, event or whatever is happening around your place of stay.</p>
+					<h1 class="text-center">Our Features:</h1>
+					<h3>Seek</h3>
+					<p>Map search yourself to find a place that is most relevant to you – near a museum, near an event, near work, on the river, or just wherever you want. Then search your local bar, restaurant, theater, event or whatever is happening around your place of stay.</p>
 				  
 				   <h3>Select</h3>
 				  <p>Sort by our conveniently designed categories of Smart, Cool & Lux or Select your service of choice (want movie tickets? A beer delivered? Forgot your toothpaste? Or just want milk!)</p>
@@ -373,7 +497,7 @@
 				  <h3>One Click Pay</h3>
 				  <p>Click Pay and it’s done! Your confirmation is instant for accommodations or any service you choose.</p>
 				 
-				</div>
+		;		</div>
 				<div class="col-sm-4">
 						 <img src="images/features.png" width="100%" height="100%">
 				</div>
@@ -387,38 +511,37 @@
 				  <h3>Record</h3>
 				  <p>Your “doings” will be recorded in sequence of event – almost like a journal! So you can come back and easily locate the number of the elephant mahout who took you on a safari with ease.</p>
 				 
-				  
-				  
 				</div>
-				
 			</div>
-			
 	  </section>
+				  
+				  
+				
+			
 	   
 	  
 	   
-	    <section>
+	    <section class="team">
 	  
-	  <h1 class="text-center"> Team </h1>
+	  
 		<div class="row">
-		
-				<div class="col-sm-3">
-				  <img class="img-circle" src="http://www.gardenvisit.com/uploads/image/image/181/18185/kew_gardens_lily_original.jpg" width="100%" height="236">
-				  <h3>Column 1</h3>
+			<div class="team_sub">
+				<h1 class="text-center">Meet the Team </h1>
+				<p> Stayology is founded and run by a team of domain experts in travel & hospitality, marketing & branding, technology and organization building.  </p>
+			</div>		
+				<div class="col-sm-3 col-xs-6">
+				   <h4>ARJUN BALJEE</h4>
 				 
 				</div>
-				<div class="col-sm-3">
-				   <img  class="img-circle" src="http://www.gardenvisit.com/uploads/image/image/181/18185/kew_gardens_lily_original.jpg" width="100%" height="236">
-				  <h3>Column 2</h3>
+				<div class="col-sm-3 col-xs-6">
+				  <h4>RAKESH RAVURI</h4>
 				 
 				</div>
-				<div class="col-sm-3">
-				  <img class="img-circle" src="http://www.gardenvisit.com/uploads/image/image/181/18185/kew_gardens_lily_original.jpg" width="100%" height="236">
-				  <h3>Column 3</h3>
+				<div class="col-sm-3 col-xs-6">
+				 <h4>GIRISH RAJ NAIR</h4>
 				 </div>
-				<div class="col-sm-3">
-				  <img class="img-circle" src="http://www.gardenvisit.com/uploads/image/image/181/18185/kew_gardens_lily_original.jpg" width="100%" height="236">
-				  <h3>Column 3</h3>
+				<div class="col-sm-3 col-xs-6">
+				  <h4>SANDEEP DHAR</h4>
 				  
 				</div>
 		
@@ -427,11 +550,11 @@
 	  </section>
 	 
 	  
-	  <section>
+	  <section class="career">
 	  
 		  <div class="row">
 			<div class="col-sm-12 text-center">
-			  <h1 class="text-center"> Career </h1>
+			  <h1 class="text-center"> CAREER AT STAYOLOGY </h1>
 			  <p>
 			  Want to quit your stable job and join a bunch of madmen about to change the way we stay and experience the local? Want to quit your existing mythical stock option plan and join an honest company? 
 
@@ -445,7 +568,7 @@
 
 			  </p>
 			   
-			  <button type="button" class="btn btn-primary">Primary</button>
+			  <button type="button" class="btn carbutton">Apply</button>
 		   </div>
 	  </section>
 	 
