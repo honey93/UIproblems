@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<style>
+
+.baap{
+overflow: hidden;
+width: 440px;
+
+}
+.relative {
+   
+    position: relative;
+    top:10px;
+    left: 0px;
+  
+   overflow: hidden;
+    border: 3px solid red;
+}
+
+.absolute {
+  display: inline-block;
+      float: left;
+  list-style: none;
+    width: 200px;
+    height: 320px;
+    border: 3px solid #8AC007;
+    margin-right: 20px;
+}
+
+.active{
+
+background-color: orange;
+}
+</style>
+</head>
+<body>
+<div class="baap">
+<div class="relative">
+  <div class="absolute">This div element has position: absolute. It is placed 80 pixels to the right of the left edge of the containing positioned element (div with class="relative").</div>
+<div class="absolute">This div element has position: absolute. It is placed 90 pixels to the right of the left edge of the containing positioned element (div with class="relative").</div>
+
+<div class="absolute">This div element has position: absolute. It is placed 100 pixels to the right of the left edge of the containing positioned element (div with class="relative").</div>
+
+<div class="absolute">This div element has position: absolute. It is placed 110 pixels to the right of the left edge of the containing positioned element (div with class="relative").</div>
+</div
+
+</div>
+
+<button class="r" onclick="right()"> Right </button>
+<button class="l" onclick="left()"> Left </button>
+
+
+
+<script>
+
+
+
+
+$(document).ready(function(){
+
+function adding(x){
+$(x).addClass("active");
+$(x).siblings().removeClass("active");
+alert(x.position().left);
+var po = x.position().left;
+//alert(po);
+if(po < max_width)
+$(".relative").animate({left: - po},"slow","swing");
+else
+$(".relative").animate({left: - max_width},"slow","swing");
+}
+
+      $(".r").on("click",function(){
+         
+      var $target_element = $(".active").next();
+         
+        adding($target_element);
+ 
+       // alert("hello right");
+
+
+      });
+ 
+  
+  $(".absolute:first").addClass("active");
+
+//  alert($(".active").next().position().left);
+
+var total_width = 0;
+ 
+$(".absolute").each(function(){
+
+total_width = total_width + $(this).outerWidth(true);
+
+}) 
+
+$(".relative").width(total_width);
+
+
+var max_width = total_width - $(".baap").width();
+
+
+});
+
+</script>
+
+</body>
+</html>
+
