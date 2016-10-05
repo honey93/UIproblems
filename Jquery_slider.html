@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<style>
+
+
+.news-content{
+ 
+  margin-top: 40px;
+
+ }  
+
+ .news-content div{
+
+
+  margin-right: 20px;
+ }
+ 
+ .grand-father{
+  position:relative;
+  width: 80%;
+  margin: auto;
+ }
+ 
+ 
+ .news-content-father{
+  
+  width: 80%;
+  overflow: hidden;
+  margin: auto;
+  
+ 
+ }
+ 
+ .left-button{
+ cursor: pointer;
+ position:absolute;
+ left: 60px;
+ top: 190px;
+ }
+ 
+ .right-button{
+ 
+ position:absolute;
+ right: 40px;
+ top: 190px;
+ }
+ 
+ 
+ 
+ .news-content{
+  position: relative;
+ 
+ }
+ 
+ .news-content div{
+  display: inline-block;
+  float: left;
+ }
+ 
+ .news-content img{
+  
+  float: left;
+  margin-right: 10px;
+ }
+ 
+
+</style>
+
+<title>Page Title</title>
+</head>
+<body>
+
+<div class="row text-center mar-small">
+  
+   <h1>  In The Media  </h1>
+   
+   <div class="col-sm-12 quote">
+     <img src="images/new-acadgild-website_183.png" width="50px">
+   </div>
+   
+   
+   <div class="news-detail">
+     
+     <div class="col-sm-12 news-description" id="new-acadgild-website_215">
+      
+      <h3> “Last Innings of my life”, says Vinod Dham   </h3>
+      <p> After starting a series of new ventures, he is now making a comeback to entrepreneurship and this time, into education. </p>
+      
+     </div>
+     
+     <div class="col-sm-12 news-description" id="new-acadgild-website_218">
+      
+      <h3> AcadGild set to announce first round of external funding, to expand    </h3>
+      <p> With this, the venture, which offers software programming courses through personalized mentoring to students in India and the US, will be able to expand in the US. </p>
+      
+     </div>
+     
+       
+
+     
+     <div class="col-sm-12 news-description" id="new-acadgild-website_221">
+      
+      <h3> The Summer Kidpreneurs: B'luru Kids Develop Social App- vPledge  </h3>
+      <p> Two Bangalore-based school students have used their summer holidays to not only learn the nuances of building apps, but even created one that helps users make pledges around social causes.
+      </p>
+      
+     </div>
+     
+     
+     <div class="col-sm-12 news-description" id="new-acadgild-website_224">
+      
+      <h3> Vinod Dham makes a comeback, to start an online technology education startup Acadgild    </h3>
+      <p> Vinod Dham, called Father of the Pentium chip, is returning as an entrepreneur after 15 years. </p>
+      
+     </div>
+   
+   
+   </div>
+  
+   <div class="grand-father">
+    <div class="news-content-father text-left">
+     <div class="news-content">
+     
+      <div> <img src="images/new-acadgild-website_215.png" width="200px"> </div>
+       
+      
+      <div> <img src="images/new-acadgild-website_218.png" width="200px"> </div>
+      
+      
+      <div> <img src="images/new-acadgild-website_221.png" width="200px"> </div>
+       
+      
+      <div> <img src="images/new-acadgild-website_215.png" width="200px"> </div>
+      
+      <div> <img src="images/new-acadgild-website_215.png" width="200px"> </div>
+      
+      <div> <img src="images/new-acadgild-website_215.png" width="200px"> </div>
+      
+      
+      <div> <img src="images/new-acadgild-website_215.png" width="200px"> </div>
+      
+      <div> <img src="images/new-acadgild-website_215.png" width="200px"> </div>
+      
+      <div> <img src="images/new-acadgild-website_215.png" width="200px"> </div>
+      
+      
+     </div>
+     
+    </div>
+    
+    <div class="left-button">
+     <img class="btn_right" src="images/new-acadgild-website_235.png" width="40px" height="70px">
+    </div>
+    <div class="right-button">
+     <img class="btn" src="images/new-acadgild-website_237.png" width="60px" height="90px">
+    </div>
+    
+   </div>
+   
+   
+  
+  </div>
+  
+<script>
+
+$(".news-description").hide();
+    
+    $(".news-description").first().show(); 
+   
+    $(".news-content  img").hover(function(){
+    
+     var p = $(this).attr("src");
+     var a = p.split("/");
+     var b = a[1].split(".");
+     var p = "#" + b[0];
+     $(p).show();
+     $(p).siblings().hide();
+     
+     
+    },function(){
+    
+    
+    
+    });
+    
+    
+    $(window).load(function(){
+    
+    
+     var total_width = 0;
+     
+     //alert(total_width);
+     var max_width = $(".news-content-father").width();
+    
+     $(".news-content div").each(function(){
+     
+      total_width = total_width + $(this).outerWidth(true);
+     
+     });
+    
+     //total_width = total_width; 
+     //alert(total_width);
+        max_width = total_width - max_width;
+     
+     $(".news-content").width(total_width);
+    
+    
+     
+     var $p = $(".news-content div").first();
+     
+     $(".btn").click(function(){
+     
+      var t = $p.next().position().left;
+      //alert(t);
+      
+      if( t< max_width)
+       $(".news-content").animate({"left":-t},"slow","swing");
+      
+      else
+       $(".news-content").animate({"left":-max_width},"slow","swing");
+       
+     
+      $p = $p.next();
+     
+     });
+     
+     
+     $(".btn_right").click(function(){
+     
+      var q = $p.prev().position().left;
+      //alert(t);
+      
+      if( q< max_width)
+       $(".news-content").animate({"left":-q},"slow","swing");
+      
+      else
+       $(".news-content").animate({"left":-max_width},"slow","swing");
+       
+     
+      $p = $p.prev();
+     
+     });
+      
+      
+     
+    
+    });
+    
+    
+
+</script>
+
+</body>
+</html>
+
